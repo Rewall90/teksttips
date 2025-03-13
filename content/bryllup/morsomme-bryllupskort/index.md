@@ -36,7 +36,7 @@ number_of_texts: 30
 
 # Bryllupskort med morsomme tekster
 
-Skal du skrive et bryllupskort og ønsker noe som er både personlig og minneverdig? Her har vi samlet 30 kreative tekster som kombinerer kjærlighet med en leken tone. Disse tekstene er perfekte for å gratulere brudeparet på deres store dag.
+Skal du skrive et bryllupskort og ønsker noe som er både personlig og minneverdig? Her har vi samlet 30 kreative tekster som kombinerer kjærlighet med en leken og morsom tone. Disse tekstene er perfekte for å gratulere brudeparet på deres store dag.
 
 ## Kreative bryllupskort-tekster
 

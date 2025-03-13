@@ -3,7 +3,7 @@ title: "Gratulerer med dagen – De 134 beste forslagene til hilsener"
 date: 2024-03-05T12:00:00+01:00
 lastmod: 2024-03-05T12:00:00+01:00
 draft: false
-description: "En omfattende samling av 134 kreative og personlige bursdagshilsener for enhver anledning."
+description: "Bursdager er en av livets viktigste markeringer – en dag som symboliserer vår eksistens og feirer vårt liv. En velskrevet bursdagshilsen kan gjøre dagen enda mer spesiell for mottakeren og vise at du virkelig bryr deg. Enten du sender et kort, en tekstmelding eller en digital hilsen, er ordene dine en gave i seg selv. I denne samlingen finner du et bredt utvalg av bursdagshilsener for ulike relasjoner og anledninger, fra søte og hjertelige til morsomme og dype."
 kategorier: ["bursdagshilsen"]
 tags: ["gratulasjon", "personlig", "kreativ", "morsom", "formell", "søt"]
 featured_image: "gratulerer-med-dagen.webp"
@@ -229,10 +229,3 @@ Du kan enkelt tilpasse hilsenene ved å:
 - Bruke kallenavn eller kjælenavn der det passer
 - Inkludere humor eller alvor basert på relasjonen
 - Tilpasse lengden etter medium (kort/SMS vs. kort/brev)
-
-## Relaterte hilsener
-
-- [Morsomme bursdagshilsener](/bursdagshilsen/morsomme-hilsener)
-- [Formelle bursdagshilsener](/bursdagshilsen/formelle-hilsener)
-- [Korte bursdagshilsener](/bursdagshilsen/korte-hilsener)
-- [Romantiske bursdagshilsener](/bursdagshilsen/romantiske-hilsener) 
