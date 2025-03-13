@@ -1,0 +1,3 @@
+{{ $options := dict "targetPath" "js/main.js" "minify" true }}
+{{ $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>

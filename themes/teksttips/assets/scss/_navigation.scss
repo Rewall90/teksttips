@@ -1,0 +1,154 @@
+// Header og navigasjon
+.site-header {
+    background: $background;
+    height: $header-height;
+    border-bottom: 1px solid $border-color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.logo {
+    a {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: $text-color;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-block;
+    padding: $spacing-sm 0;
+
+    &:hover,
+    &.active {
+        color: $primary-color;
+    }
+}
+
+// Dropdown meny
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropbtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: $spacing-sm 0;
+        font-size: inherit;
+        font-family: inherit;
+        color: $text-color;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $background;
+        min-width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        z-index: 1000;
+        margin-top: $spacing-sm;
+
+        a {
+            color: $text-color;
+            padding: $spacing-md $spacing-lg;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: $light-background;
+                color: $primary-color;
+            }
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+}
+
+// Mobil meny
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-sm;
+
+    span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: $text-color;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+}
+
+// Responsive navigasjon
+@media (max-width: $tablet) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        background: $background;
+        padding: $spacing-md;
+        flex-direction: column;
+        gap: $spacing-md;
+        border-bottom: 1px solid $border-color;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: $light-background;
+
+        a {
+            padding-left: $spacing-xl;
+        }
+    }
+} 

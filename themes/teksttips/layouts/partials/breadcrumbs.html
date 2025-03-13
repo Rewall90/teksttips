@@ -1,0 +1,29 @@
+{{ $currentPage := . }}
+<nav class="breadcrumbs" aria-label="breadcrumb">
+    <div class="container">
+        <a href="/">Hjem</a>
+        <span class="separator">/</span>
+        
+        {{ if .IsHome }}
+            <span class="current">Hjem</span>
+        {{ else if eq .Kind "taxonomy" }}
+            {{ if eq .Type "kategorier" }}
+                <span class="current">Kategorier</span>
+            {{ else }}
+                <span class="current">{{ .Title }}</span>
+            {{ end }}
+        {{ else if eq .Kind "term" }}
+            <a href="/kategorier">Kategorier</a>
+            <span class="separator">/</span>
+            <span class="current">{{ .Title }}</span>
+        {{ else if .IsSection }}
+            <span class="current">{{ .Title }}</span>
+        {{ else }}
+            {{ with .Section }}
+                <a href="/{{ . }}">{{ humanize . | title }}</a>
+            {{ end }}
+            <span class="separator">/</span>
+            <span class="current">{{ .Title }}</span>
+        {{ end }}
+    </div>
+</nav> 

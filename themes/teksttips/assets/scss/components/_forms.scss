@@ -1,0 +1,124 @@
+// Form styles
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: $text-color;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $text-color;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    
+    &:focus {
+        border-color: $primary-color;
+        outline: 0;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.25);
+    }
+    
+    &::placeholder {
+        color: #a0aec0;
+    }
+    
+    &:disabled {
+        background-color: #f7fafc;
+        opacity: 0.7;
+    }
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-select {
+    @extend .form-control;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+}
+
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.form-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #e53e3e;
+}
+
+// Form layout
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    
+    .form-group {
+        flex: 1 0 0%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+
+// Search form
+.search-form {
+    position: relative;
+    
+    .search-input {
+        @extend .form-control;
+        padding-right: 3rem;
+    }
+    
+    .search-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 3rem;
+        background: none;
+        border: none;
+        color: #718096;
+        cursor: pointer;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+} 

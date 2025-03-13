@@ -1,0 +1,37 @@
+{{ $images := .Resources.Match "*.{jpg,jpeg,png,webp}" }}
+{{ with index $images 0 }}
+    {{ $tiny := .Resize "20x" }}
+    {{ $small := .Resize "400x" }}
+    {{ $medium := .Resize "800x" }}
+    {{ $large := .Resize "1200x" }}
+    <div class="article-image">
+        <picture>
+            {{ with $large.RelPermalink }}
+            <source
+                media="(min-width: 1200px)"
+                srcset="{{ . }}"
+                type="image/webp">
+            {{ end }}
+            {{ with $medium.RelPermalink }}
+            <source
+                media="(min-width: 800px)"
+                srcset="{{ . }}"
+                type="image/webp">
+            {{ end }}
+            {{ with $small.RelPermalink }}
+            <source
+                media="(min-width: 400px)"
+                srcset="{{ . }}"
+                type="image/webp">
+            {{ end }}
+            <img
+                src="{{ $tiny.RelPermalink }}"
+                data-src="{{ $small.RelPermalink }}"
+                alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}"
+                loading="lazy"
+                decoding="async"
+                style="background-size: cover; background-image: url(data:image/jpeg;base64,{{ $tiny.Content | base64Encode }});"
+                onload="this.style.backgroundImage='none'">
+        </picture>
+    </div>
+{{ end }} 

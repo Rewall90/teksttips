@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and development paths
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /drafts/
+
+# Sitemap
+Sitemap: https://www.teksttips.no/sitemap.xml 

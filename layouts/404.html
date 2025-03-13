@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12 max-w-4xl">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Oops! Siden ble ikke funnet</h1>
+    <p class="text-xl text-gray-600 mb-8">Vi kan dessverre ikke finne siden du leter etter.</p>
+    <img src="/images/404-illustration.webp" alt="Illustrasjon av en 404-feil" class="mx-auto mb-8 max-w-md">
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-800">Her er noen forslag:</h2>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li>Sjekk om nettadressen er skrevet riktig</li>
+      <li>Gå tilbake til <a href="/" class="text-blue-600 hover:underline">forsiden</a></li>
+      <li>Prøv å søke etter det du leter etter</li>
+      <li>Utforsk noen av våre populære kategorier nedenfor</li>
+    </ul>
+  </div>
+
+  <div class="mb-12">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Populære kategorier</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="/bursdagshilsen/" class="block bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Bursdagshilsener</h3>
+        <p class="text-gray-600">Finn den perfekte hilsenen for å feire en bursdag</p>
+      </a>
+      <a href="/dikt/" class="block bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Dikt</h3>
+        <p class="text-gray-600">Vakre dikt for alle anledninger</p>
+      </a>
+      <a href="/bryllup/" class="block bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Bryllupstekster</h3>
+        <p class="text-gray-600">Tekster for å feire kjærligheten</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p class="text-gray-600 mb-4">Trenger du hjelp? <a href="/om-oss/kontakt/" class="text-blue-600 hover:underline">Kontakt oss</a></p>
+    <a href="/" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Gå til forsiden</a>
+  </div>
+</div>
+{{ end }} 

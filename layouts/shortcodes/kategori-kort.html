@@ -1,0 +1,56 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+  {{ range $name, $taxonomy := .Site.Taxonomies.kategorier }}
+    {{ if ne $name "uncategorized" }}
+      <a href="{{ "/kategorier/" | relLangURL }}{{ $name | urlize }}" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="relative h-40 overflow-hidden">
+          {{ $categoryImage := printf "%s-kategori.webp" $name | urlize }}
+          <img src="/images/categories/{{ $categoryImage }}" alt="Illustrasjon for {{ $name }}" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <h3 class="absolute bottom-3 left-4 text-xl font-bold text-white">{{ humanize $name }}</h3>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-600 mb-2">{{ len $taxonomy }} tekster</p>
+          <p class="text-sm text-gray-500">Utforsk vår samling av {{ lower (humanize $name) }}</p>
+        </div>
+      </a>
+    {{ end }}
+  {{ else }}
+    <!-- Fallback hvis ingen kategorier er definert -->
+    <div class="col-span-3 text-center py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/bursdagshilsen/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="/images/categories/bursdagshilsen-kategori.webp" alt="Bursdagshilsener" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 text-xl font-bold text-white">Bursdagshilsener</h3>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-gray-500">Finn den perfekte hilsenen for å feire en bursdag</p>
+          </div>
+        </a>
+        
+        <a href="/dikt/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="/images/categories/dikt-kategori.webp" alt="Dikt" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 text-xl font-bold text-white">Dikt</h3>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-gray-500">Vakre dikt for alle anledninger</p>
+          </div>
+        </a>
+        
+        <a href="/bryllup/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="/images/categories/bryllup-kategori.webp" alt="Bryllupstekster" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 text-xl font-bold text-white">Bryllupstekster</h3>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-gray-500">Tekster for å feire kjærligheten</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  {{ end }}
+</div> 

@@ -1,0 +1,128 @@
+baseURL = 'https://teksttips.no/'
+languageCode = 'nb-NO'
+defaultContentLanguage = 'nb'
+title = 'Teksttips'
+theme = 'teksttips'
+
+# Aktivere sitemap og robots.txt
+enableRobotsTXT = true
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[params]
+  description = 'Teksteksempler og skrivetips for alle anledninger'
+  author = 'Teksttips'
+  mainSections = ['bursdagshilsen', 'bryllup', 'dikt', 'visdomsord']
+
+[menu]
+  [[menu.main]]
+    name = 'Hjem'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Kategorier'
+    url = '/kategorier/'
+    weight = 2
+    identifier = "kategorier"
+  [[menu.main]]
+    name = 'Bursdagshilsener'
+    url = '/bursdagshilsen/'
+    parent = "kategorier"
+    weight = 1
+  [[menu.main]]
+    name = 'Bryllup'
+    url = '/bryllup/'
+    parent = "kategorier"
+    weight = 2
+  [[menu.main]]
+    name = 'Dikt'
+    url = '/dikt/'
+    parent = "kategorier"
+    weight = 3
+  [[menu.main]]
+    name = 'Visdomsord'
+    url = '/visdomsord/'
+    parent = "kategorier"
+    weight = 4
+  [[menu.main]]
+    name = 'uncategorized'
+    url = '/uncategorized/'
+    parent = "kategorier"
+    weight = 4
+
+  # Footer-meny med alle "Om oss"-sidene
+  [[menu.footer]]
+    name = "Om oss"
+    url = "/om-oss/"
+    weight = 1
+  [[menu.footer]]
+    name = "Kontakt oss"
+    url = "/om-oss/kontakt/"
+    weight = 2
+  [[menu.footer]]
+    name = "Personvern"
+    url = "/om-oss/personvern/"
+    weight = 3
+  [[menu.footer]]
+    name = "Cookies"
+    url = "/om-oss/cookies/"
+    weight = 4
+  [[menu.footer]]
+    name = "Vilkår for bruk"
+    url = "/om-oss/vilkar/"
+    weight = 5
+  [[menu.footer]]
+    name = "FAQ"
+    url = "/om-oss/faq/"
+    weight = 6
+  [[menu.footer]]
+    name = "Forfattere"
+    url = "/forfattere/petter/"
+    weight = 7
+
+[taxonomies]
+  category = 'kategorier'
+  tag = 'stikkord'
+  author = 'forfattere'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+
+enableGitInfo = true
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+
+[caches]
+  [caches.getjson]
+    maxAge = "10s"
+  [caches.getcsv]
+    maxAge = "10s"
+  [caches.getresource]
+    maxAge = "10s"
+  [caches.images]
+    maxAge = "24h"
+  [caches.assets]
+    maxAge = "24h"

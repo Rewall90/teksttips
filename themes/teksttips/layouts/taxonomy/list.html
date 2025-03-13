@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<div class="category-page">
+    <div class="container">
+        <header class="category-header">
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}
+                <p class="lead">{{ . }}</p>
+            {{ end }}
+        </header>
+
+        <div class="category-content">
+            {{ .Content }}
+        </div>
+
+        <div class="category-articles">
+            {{ if .Pages }}
+                <div class="articles-grid">
+                    {{ range .Pages }}
+                        {{ partial "article-card.html" (dict "article" . "showDate" true) }}
+                    {{ end }}
+                </div>
+            {{ else }}
+                <p>Ingen artikler funnet i denne kategorien.</p>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

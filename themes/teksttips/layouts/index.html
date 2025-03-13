@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="hero-home">
+    <div class="hero-content">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Teksttips</h1>
+                <p class="lead">Teksteksempler og skrivetips for alle anledninger</p>
+                <div class="hero-buttons">
+                    <a href="/kategorier" class="button primary">Les tekstene våre</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="container main-content">
+        {{ $sections := .Site.Sections }}
+        {{ $sortedSections := sort $sections "Title" }}
+        {{ range $sortedSections }}
+            {{ if ne .Section "om-oss" }}
+                {{ $regularPages := where .Pages "Kind" "page" }}
+                {{ if gt (len $regularPages) 0 }}
+                <section class="category-section">
+                    <div class="section-header">
+                        <a href="{{ .RelPermalink }}" class="section-title-link">
+                            <h2 class="section-title">{{ humanize .Section | title }}</h2>
+                        </a>
+                        <span class="article-count">({{ len $regularPages }} artikler)</span>
+                    </div>
+                    <div class="articles-grid">
+                        {{ range first 3 $regularPages }}
+                            {{ partial "article-card.html" (dict "article" . "showDate" false) }}
+                        {{ end }}
+                    </div>
+                </section>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</main>
+{{ end }}

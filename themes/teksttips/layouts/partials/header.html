@@ -1,0 +1,44 @@
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ .Site.BaseURL }}" aria-label="Hjem">{{ .Site.Title }}</a>
+        </div>
+        
+        <nav class="main-nav" aria-label="Hovednavigasjon">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ if eq .Name "Kategorier" }}
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn nav-link" aria-haspopup="true" aria-expanded="false">
+                            Kategorier
+                            <span class="dropdown-icon" aria-hidden="true">▼</span>
+                        </a>
+                        <div class="dropdown-content" role="menu">
+                            {{ range .Children }}
+                                <a href="{{ .URL }}" role="menuitem"
+                                   {{ if $currentPage.IsMenuCurrent "main" . }}
+                                   aria-current="page"
+                                   {{ end }}>
+                                    {{ .Name }}
+                                </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ else }}
+                    <a href="{{ .URL }}" class="nav-link"
+                       {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                       aria-current="page"
+                       {{ end }}>
+                        {{ .Name }}
+                    </a>
+                {{ end }}
+            {{ end }}
+        </nav>
+
+        <button class="mobile-menu-toggle" aria-label="Åpne meny" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

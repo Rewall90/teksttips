@@ -1,0 +1,19 @@
+{{- $data := dict "version" "https://jsonfeed.org/version/1" "title" .Site.Title "home_page_url" .Site.BaseURL "feed_url" (.Site.BaseURL | absURL) "description" .Site.Params.description -}}
+
+{{- $items := slice -}}
+{{- range where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+  {{- $item := dict "id" .Permalink "url" .Permalink "title" .Title "content_html" .Content "date_published" (.Date.Format "2006-01-02T15:04:05Z07:00") -}}
+  
+  {{- with .Params.featured_image -}}
+    {{- $item = merge $item (dict "image" (. | absURL)) -}}
+  {{- end -}}
+  
+  {{- with .Params.kategorier -}}
+    {{- $item = merge $item (dict "tags" .) -}}
+  {{- end -}}
+  
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- $data = merge $data (dict "items" $items) -}}
+{{- $data | jsonify -}} 

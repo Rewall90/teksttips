@@ -1,0 +1,606 @@
+:root {
+    /* Farger */
+    --primary-color: #2c5282;
+    --secondary-color: #4299e1;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background: #ffffff;
+    --light-background: #f7fafc;
+    --border-color: #e2e8f0;
+
+    /* Layout */
+    --container-width: 800px;
+    --header-height: 70px;
+    --list-spacing: 1.5rem;
+    --list-item-spacing: 1rem;
+
+    /* Typography */
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --line-height-base: 1.6;
+    --line-height-relaxed: 1.8;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Breakpoints */
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop: 1024px;
+}
+
+/* Reset og base-stiler */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: var(--background);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header og navigasjon */
+.site-header {
+    background: var(--background);
+    height: var(--header-height);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Dropdown meny */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.dropbtn:hover {
+    color: var(--primary-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background);
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-background);
+    color: var(--primary-color);
+}
+
+.show {
+    display: block;
+}
+
+/* Hero-seksjon */
+.hero {
+    background: var(--light-background);
+    padding: 4rem 0 2rem;
+    margin-top: var(--header-height);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero .lead {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Artikkel-liste og kort */
+.articles-list {
+    padding: 2rem 0;
+}
+
+.article-card {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article-card h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-card h2 {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.article-card h1 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.article-card h1 a:hover {
+    color: var(--primary-color);
+}
+
+.featured-image {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.excerpt {
+    color: var(--light-text);
+    margin: 1.5rem 0;
+    line-height: 1.8;
+}
+
+.excerpt p {
+    margin-bottom: 1rem;
+}
+
+.excerpt p:last-child {
+    margin-bottom: 0;
+}
+
+/* Knapper */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background: var(--secondary-color);
+}
+
+/* Enkeltartikkel */
+.single-article {
+    margin-top: var(--header-height);
+    padding: 4rem 0;
+}
+
+.article-header {
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--light-background);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text);
+}
+
+/* Mobil meny */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Responsivt design */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 90%;
+        --font-size-2xl: 1.75rem;
+        --spacing-xl: 1.75rem;
+    }
+
+    .article-card {
+        padding: var(--spacing-lg);
+    }
+
+    .featured-image {
+        margin: var(--spacing-lg) calc(-1 * var(--spacing-md));
+    }
+
+    .featured-image img {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+        --font-size-2xl: 1.5rem;
+        --font-size-xl: 1.25rem;
+        --font-size-lg: 1.125rem;
+        --spacing-xl: 1.5rem;
+    }
+
+    .hero {
+        padding: calc(var(--spacing-xl) + var(--header-height)) 0 var(--spacing-lg);
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .article-card h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .article-card h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    .single-article {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .article-content {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --header-height: 50px;
+        --font-size-base: 0.9375rem;
+        --spacing-lg: 1.25rem;
+        --spacing-xl: 1.25rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .article-card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .excerpt {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    }
+
+    .footer-section {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Forbedret typografi for artikkelinnhold */
+.article-content h2 {
+    font-size: var(--font-size-2xl);
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.article-content h3 {
+    font-size: var(--font-size-xl);
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.article-content p {
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Forbedret lesbarhet for lenker */
+.article-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+    transition: color 0.2s, text-decoration-thickness 0.2s;
+}
+
+.article-content a:hover {
+    color: var(--secondary-color);
+    text-decoration-thickness: 0.2em;
+}
+
+/* Forbedret tabell-responsivitet */
+.article-content table {
+    width: 100%;
+    margin: var(--spacing-lg) 0;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
+.article-content table th,
+.article-content table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .article-content table {
+        font-size: var(--font-size-base);
+    }
+
+    .article-content table th,
+    .article-content table td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/* Forbedret bildehåndtering */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: var(--spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+    .article-content img {
+        border-radius: 4px;
+        margin: var(--spacing-md) 0;
+    }
+}
+
+/* Forbedret kodeblokk-responsivitet */
+.article-content pre {
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) calc(-1 * var(--spacing-md));
+    background: var(--light-background);
+    overflow-x: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .article-content pre {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-md) calc(-1 * var(--spacing-sm));
+        font-size: 0.875rem;
+    }
+}
+
+/* Liste-stiler (både ul og ol) */
+.article-content ul,
+.article-content ol {
+    padding-left: var(--list-spacing);
+    margin: var(--list-spacing) 0;
+    list-style-position: outside;
+}
+
+.article-content ul li,
+.article-content ol li {
+    margin-bottom: var(--list-item-spacing);
+    padding-left: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Spesifikke stiler for ul */
+.article-content ul {
+    list-style-type: disc;
+}
+
+.article-content ul ul {
+    list-style-type: circle;
+    margin: 0.75rem 0;
+}
+
+.article-content ul ul ul {
+    list-style-type: square;
+}
+
+/* Spesifikke stiler for ol */
+.article-content ol {
+    list-style-type: decimal;
+    counter-reset: item;
+}
+
+.article-content ol ol {
+    list-style-type: lower-alpha;
+    margin: 0.75rem 0;
+}
+
+.article-content ol ol ol {
+    list-style-type: lower-roman;
+}
+
+/* Felles hover-effekt for lister */
+.article-content ul li:hover,
+.article-content ol li:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+/* Tablet-tilpasning */
+@media (max-width: 768px) {
+    :root {
+        --list-spacing: 1.25rem;
+        --list-item-spacing: 0.875rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+        padding-left: var(--list-spacing);
+    }
+
+    .article-content ul li,
+    .article-content ol li {
+        padding-left: 0.25rem;
+        margin-bottom: var(--list-item-spacing);
+    }
+
+    /* Forbedret lesbarhet for numre og punkter */
+    .article-content ol li::marker,
+    .article-content ul li::marker {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+}
+
+/* Mobil-tilpasning */
+@media (max-width: 480px) {
+    :root {
+        --list-spacing: 1rem;
+        --list-item-spacing: 0.75rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+        padding-left: var(--list-spacing);
+    }
+
+    .article-content ul li,
+    .article-content ol li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: var(--list-item-spacing);
+    }
+
+    /* Kompakt visning for nøstede lister */
+    .article-content ul ul,
+    .article-content ol ol {
+        margin: 0.5rem 0;
+    }
+} 

@@ -1,0 +1,48 @@
+<footer class="teksttips-footer bg-blue-600 text-white py-6" style="width: 100%; max-width: 100%; margin: 0; padding: 2rem 1rem;">
+  <div class="container mx-auto" style="max-width: 1200px;">
+    <!-- Hovedinnhold i footer - enklere struktur -->
+    <div class="teksttips-footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+      <!-- Kategorier -->
+      <div class="teksttips-footer-section" style="flex: 1; min-width: 200px; margin-right: 2rem; margin-bottom: 1.5rem;">
+        <h3 class="text-lg font-semibold mb-2">Kategorier</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 0.5rem;"><a href="/bursdagshilsen/" class="text-white hover:text-gray-200 text-sm">Bursdagshilsener</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="/dikt/" class="text-white hover:text-gray-200 text-sm">Dikt</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="/bryllup/" class="text-white hover:text-gray-200 text-sm">Bryllupstekster</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="/visdomsord/" class="text-white hover:text-gray-200 text-sm">Visdomsord</a></li>
+        </ul>
+      </div>
+      
+      <!-- Om oss-lenker -->
+      <div class="teksttips-footer-section" style="flex: 1; min-width: 200px; margin-right: 2rem; margin-bottom: 1.5rem;">
+        <h3 class="text-lg font-semibold mb-2">Om oss</h3>
+        <ul style="list-style: none; padding: 0;">
+          {{ range .Site.Menus.footer }}
+            <li style="margin-bottom: 0.5rem;"><a href="{{ .URL }}" class="text-white hover:text-gray-200 text-sm">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      
+      <!-- Nyhetsbrev -->
+      <div class="teksttips-footer-section" style="flex: 1; min-width: 250px; margin-bottom: 1.5rem;">
+        <h3 class="text-lg font-semibold mb-2">Nyhetsbrev</h3>
+        <p class="text-white mb-2 text-sm">
+          Meld deg på vårt nyhetsbrev for å få de nyeste tekstene.
+        </p>
+        <form action="/takk-for-pameldingen/" method="get" style="display: flex; flex-wrap: wrap;">
+          <input type="email" id="footer-email" name="email" placeholder="Din e-postadresse" required 
+                 style="flex: 2; min-width: 150px; padding: 0.5rem; border-radius: 0.25rem 0 0 0.25rem; border: none; font-size: 0.875rem;">
+          <button type="submit" 
+                  style="flex: 1; min-width: 100px; padding: 0.5rem; background-color: white; color: #2563eb; font-weight: 600; border-radius: 0 0.25rem 0.25rem 0; border: none; font-size: 0.875rem;">
+            Meld meg på
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 1rem; padding-top: 1rem; text-align: center;">
+      <p class="text-sm">&copy; {{ now.Format "2006" }} Teksttips. Alle rettigheter reservert.</p>
+    </div>
+  </div>
+</footer> 

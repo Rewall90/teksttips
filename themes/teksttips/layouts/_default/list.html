@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<div class="list-page">
+    <div class="container">
+        <header class="list-header">
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}
+                <p class="lead">{{ . }}</p>
+            {{ end }}
+        </header>
+
+        <div class="list-content">
+            {{ .Content }}
+        </div>
+
+        <div class="list-articles">
+            {{ if .Pages }}
+                <div class="articles-grid">
+                    {{ range .Pages }}
+                        {{ partial "article-card.html" (dict "article" . "showDate" false) }}
+                    {{ end }}
+                </div>
+            {{ else }}
+                <p>Ingen artikler funnet.</p>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

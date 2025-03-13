@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<div class="categories-overview">
+    <div class="container">
+        <header class="categories-header">
+            <h1>Kategorier</h1>
+            <p class="lead">Utforsk våre artikler etter tema</p>
+        </header>
+
+        <div class="categories-list">
+            {{ $sections := .Site.Sections }}
+            {{ $sortedSections := sort $sections "Title" }}
+            {{ range $sortedSections }}
+                {{ if ne .Section "om-oss" }}
+                    {{ $regularPages := where .Pages "Kind" "page" }}
+                    {{ if gt (len $regularPages) 0 }}
+                        <div class="category-item">
+                            <a href="{{ .RelPermalink }}" class="category-link">
+                                <span class="category-name">{{ .Title }}</span>
+                                <span class="article-count">({{ len $regularPages }} artikler)</span>
+                            </a>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

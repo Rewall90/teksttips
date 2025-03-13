@@ -1,0 +1,14 @@
+{{ $showDate := .showDate | default false }}
+<article class="article-card">
+    <a href="{{ .article.RelPermalink }}" class="article-link">
+        {{ partial "article-image.html" .article }}
+        <h3>{{ .article.Title }}</h3>
+        {{ if $showDate }}
+            <div class="article-meta">
+                {{ with .article.Date }}
+                    <span class="article-date">{{ .Format "02.01.2006" }}</span>
+                {{ end }}
+            </div>
+        {{ end }}
+    </a>
+</article> 

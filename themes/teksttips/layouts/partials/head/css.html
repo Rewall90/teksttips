@@ -1,0 +1,15 @@
+{{- $style := resources.Get "scss/main.scss" }}
+{{- $opts := dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" (eq hugo.Environment "development") }}
+
+{{- if eq hugo.Environment "development" }}
+  {{- $style = $style | resources.ToCSS $opts }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{- else }}
+  {{- $style = $style | resources.ToCSS $opts | minify | fingerprint "sha512" }}
+  <link 
+    rel="stylesheet" 
+    href="{{ $style.RelPermalink }}" 
+    integrity="{{ $style.Data.Integrity }}" 
+    crossorigin="anonymous"
+    media="all">
+{{- end }}
