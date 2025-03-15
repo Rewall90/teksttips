@@ -1,4 +1,4 @@
-{{ if and (not .Site.IsServer) .Site.Params.googleAnalytics }}
+{{ if and (ne hugo.Environment "development") .Site.Params.googleAnalytics }}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
 <script>
