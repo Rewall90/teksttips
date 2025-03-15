@@ -15,6 +15,7 @@ enableRobotsTXT = true
   description = 'Teksteksempler og skrivetips for alle anledninger'
   author = 'Teksttips'
   mainSections = ['bursdagshilsen', 'bryllup', 'dikt', 'visdomsord']
+  googleAnalytics = 'G-YP92GKQT70'
 
 [menu]
   [[menu.main]]
