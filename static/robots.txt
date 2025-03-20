@@ -7,4 +7,4 @@ Disallow: /dev/
 Disallow: /drafts/
 
 # Sitemap
-Sitemap: https://www.teksttips.no/sitemap.xml 
+Sitemap: https://teksttips.no/sitemap.xml 
