@@ -29,27 +29,27 @@
 </article>
 
 <div class="container main-content">
-    {{ $currentSection := .Site.GetPage .Section }}
-    {{ $regularPages := where $currentSection.Pages "Kind" "page" }}
-    {{ $otherPages := where $regularPages "Permalink" "!=" .Permalink }}
-    {{ if gt (len $otherPages) 0 }}
-    <section class="category-section">
-        <div class="section-header">
-            <a href="{{ $currentSection.RelPermalink }}" class="section-title-link">
+    {{ $currentCategories := .Params.kategorier }}
+    {{ if $currentCategories }}
+        {{ $related := where .Site.RegularPages "Params.kategorier" "intersect" $currentCategories }}
+        {{ $otherRelated := where $related "Permalink" "!=" .Permalink }}
+        {{ if gt (len $otherRelated) 0 }}
+        <section class="category-section">
+            <div class="section-header">
                 <h2 class="section-title">Relaterte innlegg</h2>
-            </a>
-        </div>
-        <div class="articles-grid">
-            {{ range first 3 (shuffle $otherPages) }}
-            <article class="article-card">
-                <a href="{{ .RelPermalink }}" class="article-link">
-                    {{ partial "article-image.html" . }}
-                    <h3>{{ .Title }}</h3>
-                </a>
-            </article>
-            {{ end }}
-        </div>
-    </section>
+            </div>
+            <div class="articles-grid">
+                {{ range first 3 (shuffle $otherRelated) }}
+                <article class="article-card">
+                    <a href="{{ .RelPermalink }}" class="article-link">
+                        {{ partial "article-image.html" . }}
+                        <h3>{{ .Title }}</h3>
+                    </a>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
     {{ end }}
 </div>
 
