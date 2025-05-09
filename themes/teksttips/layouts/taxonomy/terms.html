@@ -8,19 +8,14 @@
         </header>
 
         <div class="categories-list">
-            {{ $sections := .Site.Sections }}
-            {{ $sortedSections := sort $sections "Title" }}
-            {{ range $sortedSections }}
-                {{ if ne .Section "om-oss" }}
-                    {{ $regularPages := where .Pages "Kind" "page" }}
-                    {{ if gt (len $regularPages) 0 }}
-                        <div class="category-item">
-                            <a href="{{ .RelPermalink }}" class="category-link">
-                                <span class="category-name">{{ .Title }}</span>
-                                <span class="article-count">({{ len $regularPages }} artikler)</span>
-                            </a>
-                        </div>
-                    {{ end }}
+            {{ range $name, $taxonomy := .Site.Taxonomies.kategorier }}
+                {{ if ne $name "uncategorized" }}
+                <div class="category-item">
+                    <a href="{{ "/kategorier/" | relLangURL }}{{ $name | urlize }}" class="category-link">
+                        <span class="category-name">{{ humanize $name }}</span>
+                        <span class="article-count">({{ len $taxonomy }} artikler)</span>
+                    </a>
+                </div>
                 {{ end }}
             {{ end }}
         </div>
