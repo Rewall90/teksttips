@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://teksttips.no/sitemap.xml 
+Sitemap: http://localhost:52182/sitemap.xml 

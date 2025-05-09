@@ -5,8 +5,9 @@ lastmod: 2025-05-09
 draft: false
 description: "Søker du etter morsomme og humoristiske bursdagsdikt? Her har vi samlet de beste morsomme gratulerer med dagen diktene som garantert får frem latteren på bursdagen."
 categories: ["dikt"]
-
 tags: ["bursdag", "dikt", "humor", "morsom", "gratulasjon"]
+featured_image: "gratulerer-med-dagen-dikt-med-humor.webp"
+image_alt: "En morsom illustrasjon av bursdagsfeiring med ballonger og konfetti"
 author: "Teksttips"
 
 # SEO
