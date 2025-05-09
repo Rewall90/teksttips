@@ -1,7 +1,7 @@
 ---
 title: "Gratulerer med dagen dikt"
-date: 2024-03-19
-lastmod: 2024-03-19
+date: 2025-05-09
+lastmod: 2025-05-09
 draft: false
 description: "Finne de perfekte ordene for å feire noens bursdag? Her har vi samlet de beste bursdagshilsenene og diktene for å gjøre dagen spesiel."
 categories: ["dikt"]
@@ -20,12 +20,11 @@ target_audience: "alle"
 number_of_texts: 20
 ---
 
-# Det Beste Gratulerer med dagen diktene
+# De Beste Gratulerer med dagen diktene
 
-Feire noens bursdag er en spesiell anledning for å vise hvor mye du bryr deg. En god bursdagshilsen kan gjøre dagen enda mer minneverdig. Her har vi samlet de beste bursdagshilsenene og diktene for å hjelpe deg med å finne de perfekte ordene.
+Feire noens bursdag er en spesiell anledning for å vise hvor mye du bryr deg. Et godt bursdagsdikt kan gjøre dagen enda mer minneverdig. Her har vi samlet de beste bursdags diktene for å hjelpe deg med å finne de perfekte ordene.
 
 
-## Hovedinnhold
 
 ### Kjære venn – gratulerer med dagen
 
