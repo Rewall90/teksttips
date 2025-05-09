@@ -7,6 +7,8 @@ description: "Her finner du 150 av de fineste bursdagshilsningene – perfekt fo
 kategorier: ["bursdagshilsen"]
 tags: ["gratulasjon", "personlig", "kreativ", "søt"]
 featured_image: "Gratulerer med dagen – De 150 fineste hilsningene"
+=======
+
 author: "Teksttips"
 
 # SEO
@@ -18,6 +20,7 @@ text_type: "gratulasjon"
 occasion: "bursdag"
 mood: "varm"
 target_audience: "alle"
+
 number_of_texts: 150
 ---
 
@@ -325,3 +328,10 @@ number_of_texts: 150
 149. **Jeg skulle ønske folk sluttet å snakke om bursdagen min.**
 
 150. **Hver bursdag er en ny sjanse til å starte på nytt.**
+=======
+number_of_texts: 15
+---
+
+## 15 av de fineste bursdagshilsningene
+
+Her kommer det snart 15 utvalgte bursdagshilsener som passer for alle anledninger!
