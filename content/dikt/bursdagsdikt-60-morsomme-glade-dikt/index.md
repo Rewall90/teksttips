@@ -8,6 +8,7 @@ categories: []
 tags: []
 featured_image: "bursdagsdikt.webp"
 author: "Teksttips"
+kategorier: ["dikt"]
 
 # SEO
 seo_title: "Bursdagsdikt 60 Morsomme Glade Dikt"

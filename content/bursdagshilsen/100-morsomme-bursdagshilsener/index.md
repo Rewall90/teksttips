@@ -20,6 +20,7 @@ occasion: "bursdag"
 mood: "morsom"
 target_audience: "alle aldre"
 number_of_texts: 100
+kategorier: ["bursdagshilsen"]
 ---
 
 

@@ -20,6 +20,7 @@ occasion: "morsdag"
 mood: "kjærlig"
 target_audience: "voksne barn"
 number_of_texts: 30
+kategorier: ["dikt"]
 ---
 
 ## 💖 Ubetinget Kjærlighet

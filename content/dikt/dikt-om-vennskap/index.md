@@ -9,6 +9,7 @@ tags: []
 featured_image: "dikt-om-vennskap.webp"
 image_alt: "To venner som holder hender, symboliserer det sterke båndet i et vennskap"
 author: "Teksttips"
+kategorier: ["dikt"]
 
 # SEO
 seo_title: "Dikt Om Vennskap - Vakre Ord Om Vennskapets Betydning"

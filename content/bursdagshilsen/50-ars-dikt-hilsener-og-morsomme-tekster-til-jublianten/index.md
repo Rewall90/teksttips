@@ -19,6 +19,7 @@ occasion: "bursdag"
 mood: "" # søt, morsom, formell, etc.
 target_audience: "" # barn, voksen, besteforeldre, etc.
 number_of_texts: 0
+kategorier: ["bursdagshilsen"]
 ---
 
 

@@ -22,6 +22,7 @@ occasion: "livsvisdom"
 mood: "reflekterende"
 target_audience: "alle aldre"
 number_of_texts: 70
+kategorier: ["visdomsord"]
 ---
 
 

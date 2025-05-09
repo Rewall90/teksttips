@@ -8,6 +8,7 @@ categories: []
 tags: []
 featured_image: "Avskjedsord-Til-En-Kollega-Som-Slutter.webp"
 author: "Teksttips"
+kategorier: ["dikt"]
 
 # SEO
 seo_title: "Avskjedsord Til en Kollega Som Slutter"
