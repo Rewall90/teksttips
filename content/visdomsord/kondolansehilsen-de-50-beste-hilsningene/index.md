@@ -9,6 +9,7 @@ tags: []
 featured_image: "kondolansehilsen.webp"
 image_alt: "Et stearinlys som brenner stille, symboliserer minne og respekt for de som har gått bort"
 author: "Teksttips"
+kategorier: ["visdomsord"]
 
 # SEO
 seo_title: "Kondolansehilsen - De 50 Beste Hilsningene for å Uttrykke Medfølelse"

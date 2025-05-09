@@ -28,7 +28,7 @@ enableRobotsTXT = true
     weight = 2
     identifier = "kategorier"
   [[menu.main]]
-    name = 'Bursdagshilsener'
+    name = 'Bursdagshilsen'
     url = '/bursdagshilsen/'
     parent = "kategorier"
     weight = 1
@@ -51,7 +51,7 @@ enableRobotsTXT = true
     name = 'uncategorized'
     url = '/uncategorized/'
     parent = "kategorier"
-    weight = 4
+    weight = 5
 
   # Footer-meny med alle "Om oss"-sidene
   [[menu.footer]]

@@ -19,6 +19,7 @@ occasion: "avskjed"
 mood: "varm"
 target_audience: "kollega"
 number_of_texts: 30
+kategorier: ["dikt"]
 ---
 
 ## 🌅 Nye Begynnelser
@@ -40,7 +41,7 @@ Nyt de nye dagene, med frihet uten floss.
 ---
 
 **3. Eventyrets Start**  
-Nå starter et nytt eventyr, uten arbeidens krav,  
+Nå starter et nytt eventyr, uten arbeidsens krav,  
 Vi ønsker deg alt godt, med gleden som er sav.  
 Takk for all din tid, for alt du har gitt,  
 Nyt din pensjonisttid, med ro og med sitt.
@@ -89,7 +90,7 @@ Vi ønsker deg alt godt, hvor enn du nå må bo.
 
 **9. Takk og Farvel**  
 Takk og farvel, kjære kollega og venn,  
-Nå venter nye dager, uten arbeidens lend.  
+Nå venter nye dager, uten arbeidsens lend.  
 Vi ønsker deg alt godt, med frihet og med fred,  
 Nyt din pensjonisttid, med gleden som er led.
 

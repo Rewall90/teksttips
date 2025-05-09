@@ -9,6 +9,7 @@ tags: []
 featured_image: "70-ars-dikt.webp"
 image_alt: "En festlig kake med tallet 70 og stearinlys som symboliserer en spesiell milepæl i livet"
 author: "Teksttips"
+kategorier: ["dikt"]
 
 # SEO
 seo_title: "70 Års Dikt - Vakre og Morsomme Dikt til 70-årsdagen"

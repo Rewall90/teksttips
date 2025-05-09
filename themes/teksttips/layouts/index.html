@@ -15,28 +15,25 @@
 
 <main>
     <div class="container main-content">
-        {{ $sections := .Site.Sections }}
-        {{ $sortedSections := sort $sections "Title" }}
-        {{ range $sortedSections }}
-            {{ if ne .Section "om-oss" }}
-                {{ $regularPages := where .Pages "Kind" "page" }}
-                {{ if gt (len $regularPages) 0 }}
+        <div class="categories-list">
+            {{ range $name, $taxonomy := .Site.Taxonomies.kategorier }}
+                {{ if ne $name "uncategorized" }}
                 <section class="category-section">
                     <div class="section-header">
-                        <a href="{{ .RelPermalink }}" class="section-title-link">
-                            <h2 class="section-title">{{ humanize .Section | title }}</h2>
+                        <a href="{{ "/kategorier/" | relLangURL }}{{ $name | urlize }}" class="section-title-link">
+                            <h2 class="section-title">{{ humanize $name }}</h2>
                         </a>
-                        <span class="article-count">({{ len $regularPages }} artikler)</span>
+                        <span class="article-count">({{ len $taxonomy }} artikler)</span>
                     </div>
                     <div class="articles-grid">
-                        {{ range first 3 $regularPages }}
+                        {{ range first 3 $taxonomy }}
                             {{ partial "article-card.html" (dict "article" . "showDate" false) }}
                         {{ end }}
                     </div>
                 </section>
                 {{ end }}
             {{ end }}
-        {{ end }}
+        </div>
     </div>
 </main>
 {{ end }}
