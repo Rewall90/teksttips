@@ -5,6 +5,7 @@ lastmod: 2025-05-09
 draft: false
 description: "Søker du etter morsomme og humoristiske bursdagsdikt? Her har vi samlet de beste morsomme gratulerer med dagen diktene som garantert får frem latteren på bursdagen."
 categories: ["dikt"]
+kategorier: ["dikt"]
 tags: ["bursdag", "dikt", "humor", "morsom", "gratulasjon"]
 author: "Teksttips"
 
@@ -198,7 +199,7 @@ men der livet ditt skjer.
 
 Må dagen din fylles med latter og ro,
 og ingen som sier: "Kan du ta oppvasken nå?"
-Må du få det du ønsker – og litt til på si’,
+Må du få det du ønsker – og litt til på si'
 og slippe å skure når gjestene drar forbi.
 
 ### Ønsker deg ditt beste
