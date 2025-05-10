@@ -14,8 +14,14 @@ enableRobotsTXT = true
 [params]
   description = 'Teksteksempler og skrivetips for alle anledninger'
   author = 'Teksttips'
-  mainSections = ['bursdagshilsen', 'bryllup', 'dikt', 'visdomsord']
   googleAnalytics = 'G-YP92GKQT70'
+
+# Disable section-based category pages
+[permalinks]
+  dikt = "/kategorier/dikt/:slug/"
+  bursdagshilsen = "/kategorier/bursdagshilsen/:slug/"
+  bryllup = "/kategorier/bryllup/:slug/"
+  visdomsord = "/kategorier/visdomsord/:slug/"
 
 [menu]
   [[menu.main]]
@@ -29,29 +35,24 @@ enableRobotsTXT = true
     identifier = "kategorier"
   [[menu.main]]
     name = 'Bursdagshilsen'
-    url = '/bursdagshilsen/'
+    url = '/kategorier/bursdagshilsen/'
     parent = "kategorier"
     weight = 1
   [[menu.main]]
     name = 'Bryllup'
-    url = '/bryllup/'
+    url = '/kategorier/bryllup/'
     parent = "kategorier"
     weight = 2
   [[menu.main]]
     name = 'Dikt'
-    url = '/dikt/'
+    url = '/kategorier/dikt/'
     parent = "kategorier"
     weight = 3
   [[menu.main]]
     name = 'Visdomsord'
-    url = '/visdomsord/'
+    url = '/kategorier/visdomsord/'
     parent = "kategorier"
     weight = 4
-  [[menu.main]]
-    name = 'uncategorized'
-    url = '/uncategorized/'
-    parent = "kategorier"
-    weight = 5
 
   # Footer-meny med alle "Om oss"-sidene
   [[menu.footer]]

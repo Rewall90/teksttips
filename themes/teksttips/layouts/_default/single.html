@@ -29,9 +29,9 @@
 </article>
 
 <div class="container main-content">
-    {{ $currentCategories := .Params.kategorier }}
+    {{ $currentCategories := .Params.categories }}
     {{ if $currentCategories }}
-        {{ $related := where .Site.RegularPages "Params.kategorier" "intersect" $currentCategories }}
+        {{ $related := where .Site.RegularPages "Params.categories" "intersect" $currentCategories }}
         {{ $otherRelated := where $related "Permalink" "!=" .Permalink }}
         {{ if gt (len $otherRelated) 0 }}
         <section class="category-section">
@@ -58,18 +58,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "{{ .Title }}",
-    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+    "description": "{{ .Description }}",
+    "image": "{{ with .Params.featured_image }}{{ . }}{{ end }}",
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
     "author": {
         "@type": "Person",
-        "name": "Petter",
-        "url": "https://teksttips.no/forfattere/petter/"
+        "name": "{{ .Params.author }}"
     },
     "publisher": {
         "@type": "Organization",
         "name": "{{ .Site.Title }}",
-        "url": "{{ .Site.BaseURL }}"
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ .Site.BaseURL }}/images/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
     }
 }
 </script>

@@ -16,13 +16,14 @@
             <a href="/kategorier">Kategorier</a>
             <span class="separator">/</span>
             <span class="current">{{ .Title }}</span>
-        {{ else if .IsSection }}
+        {{ else if .Params.kategorier }}
+            <a href="/kategorier">Kategorier</a>
+            <span class="separator">/</span>
+            {{ $cat := index .Params.kategorier 0 }}
+            <a href="/kategorier/{{ $cat | urlize }}/">{{ $cat }}</a>
+            <span class="separator">/</span>
             <span class="current">{{ .Title }}</span>
         {{ else }}
-            {{ with .Section }}
-                <a href="/{{ . }}">{{ humanize . | title }}</a>
-            {{ end }}
-            <span class="separator">/</span>
             <span class="current">{{ .Title }}</span>
         {{ end }}
     </div>
