@@ -16,12 +16,8 @@ enableRobotsTXT = true
   author = 'Teksttips'
   googleAnalytics = 'G-YP92GKQT70'
 
-# Disable section-based category pages
 [permalinks]
-  dikt = "/kategorier/dikt/:slug/"
-  bursdagshilsen = "/kategorier/bursdagshilsen/:slug/"
-  bryllup = "/kategorier/bryllup/:slug/"
-  visdomsord = "/kategorier/visdomsord/:slug/"
+  kategorier = "/kategorier/:slug/"
 
 [menu]
   [[menu.main]]
@@ -85,7 +81,7 @@ enableRobotsTXT = true
     weight = 7
 
 [taxonomies]
-  category = 'kategorier'
+  kategorier = 'kategorier'
   tag = 'stikkord'
   author = 'forfattere'
 

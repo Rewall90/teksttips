@@ -14,9 +14,13 @@
         </div>
 
         <div class="category-articles">
-            {{ if .Pages }}
+            {{ $pages := .Pages }}
+            {{ $pages = where $pages "Draft" false }}
+            {{ $pages = where $pages "Date" "le" now }}
+            
+            {{ if $pages }}
                 <div class="articles-grid">
-                    {{ range .Pages }}
+                    {{ range $pages.ByDate.Reverse }}
                         {{ partial "article-card.html" (dict "article" . "showDate" true) }}
                     {{ end }}
                 </div>
