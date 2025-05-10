@@ -4,7 +4,7 @@ date: 2025-03-06T05:28:41+01:00
 lastmod: 2025-03-06T05:28:41+01:00
 draft: false
 description: "Mødre fortjener vår dypeste kjærlighet og takknemlighet for alt de gjør for oss gjennom livet. De er våre første lærere, våre største støttespillere, og de som elsker oss ubetinget gjennom alle livets oppturer og nedturer. Noen ganger kan det være vanskelig å sette ord på hvor mye de betyr for oss. Disse diktene er designet for å hjelpe deg med å uttrykke din kjærlighet, beundring og takknemlighet til den spesielle kvinnen som er din mor. Perfekt for morsdagen, bursdager, eller når som helst du ønsker å minne henne på hvor høyt hun er elsket og verdsatt."
-categories: []
+category: ["dikt"]
 tags: []
 featured_image: "Dikt-Til-Mamma.webp"
 image_alt: "En vakker blomsterbukett som symboliserer kjærlighet og takknemlighet til mamma"

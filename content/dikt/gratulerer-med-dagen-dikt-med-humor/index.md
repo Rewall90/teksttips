@@ -1,10 +1,11 @@
 ---
-title: "Gratulerer med dagen dikt med humor – Få frem latteren på bursdagen"
-date: 2025-05-09
-lastmod: 2025-05-09
+title: "Gratulerer med dagen dikt med humor"
+date: 2024-03-14
+lastmod: 2024-03-14
 draft: false
+kategorier: ["dikt"]
+slug: "gratulerer-med-dagen-dikt-med-humor"
 description: "Søker du etter morsomme og humoristiske bursdagsdikt? Her har vi samlet de beste morsomme gratulerer med dagen diktene som garantert får frem latteren på bursdagen."
-categories: ["dikt"]
 tags: ["bursdag", "dikt", "humor", "morsom", "gratulasjon"]
 featured_image: "gratulerer-med-dagen-dikt-med-humor.webp"
 image_alt: "En morsom illustrasjon av bursdagsfeiring med ballonger og konfetti"
